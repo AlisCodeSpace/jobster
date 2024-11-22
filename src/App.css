@@ -1,0 +1,13 @@
+:root {
+    --primary-color: #2e8b57;
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #F0F0F0;
+}
