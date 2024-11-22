@@ -1,12 +1,17 @@
+import React from "react";
+
 import './App.css'
+import './styles/button.css'
 
-function App() {
 
+import AppRoutes from "./routes/AppRoutes"; 
+
+const App = () => {
   return (
-    <div>
-      <h1 className='text-5xl'>Hello</h1>
+    <div className="App">
+      <AppRoutes /> 
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
