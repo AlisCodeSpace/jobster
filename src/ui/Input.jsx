@@ -2,7 +2,7 @@ import React from 'react'
 
 
 const Input = ({ className, type, placeholder, value, id, name, handleChange }) => {
-    const classes = `${className || 'bg-transparent rounded-sm px-2 py-2 border border-[var(--primary-color)] text-[var(--primary-color)] placeholder-gray-500 w-full outline-none'} `
+    const classes = `${className || 'bg-transparent rounded-sm px-2 py-2 border border-[var(--primary-color)] text-[var(--primary-color)] placeholder-gray-500 w-full outline-none '} `
 
     const renderInput = () => (
         <input 
