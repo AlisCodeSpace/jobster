@@ -2,6 +2,7 @@ import React from "react";
 
 import './App.css'
 import './styles/button.css'
+import './styles/input.css'
 
 
 import AppRoutes from "./routes/AppRoutes"; 

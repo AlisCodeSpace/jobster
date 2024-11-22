@@ -20,9 +20,9 @@ const Login = () => {
 
       {/* Divider */}
       <div className="flex items-center w-full">
-        <hr className="bg-gray-400 w-full"></hr>
+        <hr className="bg-gray-500 w-full"></hr>
         <span className="px-2 text-gray-600">or</span>
-        <hr className="bg-gray-400 w-full"></hr>
+        <hr className="bg-gray-500 w-full"></hr>
       </div>
 
       {/* Login with social media */}
