@@ -22,6 +22,7 @@ const LoginForm = () => {
             <button type='button' onClick={() => setShowPassword(prevState => !prevState)} className='absolute top-3 right-5 text-[var(--primary-color)]'>{showPassword ? <FaEye />  : <FaEyeSlash />}</button>
         </div>
 
+        {/* Forgot Password */}
         <div className='flex items-center justify-end w-full'>
             <Button text='Forgot Password?' path='/forgotpass' className='button text-sm'/>
         </div>
