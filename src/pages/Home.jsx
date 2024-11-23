@@ -9,7 +9,9 @@ const Home = () => {
       <div className="mb-4">
         <Navbar />
       </div>
-      <Outlet />
+      <div className="px-4">
+        <Outlet />
+      </div>
     </div>
   )
 }
