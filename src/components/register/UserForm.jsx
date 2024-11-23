@@ -14,8 +14,6 @@ const UserForm = () => {
   const [userEmail, setUserEmail] = useState('')
   const [userPass, setUserPass] = useState('')
 
-  const [formSubmitted, setFormSubmitted] = useState(false);
-
   const [nameError, setNameError] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
@@ -38,7 +36,6 @@ const UserForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFormSubmitted(true);
 
     // Validate fields on submit
     const validatedUsername = UsernameValidation(userFullname);
@@ -60,7 +57,7 @@ const UserForm = () => {
         email: userEmail,
         password: userPass,
       });
-      setFormSubmitted(false); // Reset submission tracking
+      
       setNameError("");
       setEmailError("");
       setPasswordError("");

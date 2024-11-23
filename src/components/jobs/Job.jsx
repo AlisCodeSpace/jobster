@@ -12,8 +12,6 @@ const Job = () => {
         <div>
             <div className='flex gap-2 items-center'>
                 <h1 className='font-semibold'>Junior Web Developer</h1>
-                <span>-</span>
-                <p className='text-sm text-gray-600'>(0 - 1) years</p>
             </div>
             <h3>Google</h3>
             <p className='text-gray-600'>Lebanon (Remote)</p>
