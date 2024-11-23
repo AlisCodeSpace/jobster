@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 
 import JobsterLight from "../../assets/images/jobster-light.png";
-import { FaSuitcase, FaSignInAlt, FaUserCircle, FaBuilding, FaClipboardList } from 'react-icons/fa';
 
 import Button from "../../ui/Button";
-
-import { NavLink } from "react-router-dom";
+import navlinks from '../../data/navlinks'
 
 const Navbar = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768); // Check screen size
@@ -45,31 +44,19 @@ const Navbar = () => {
     </nav>
   );
 
+  const renderNavLinks = navlinks.map((link, index) => (
+    <NavLink key={index} to={link.path} className={({isActive}) =>`w-16 py-2 flex flex-col items-center gap-2 rounded-sm border-t-[3px] ${isActive ? 'text-[var(--primary-color)] border-[var(--primary-color)]' : 'text-gray-600 border-transparent'}`}>
+        <span>{React.createElement(link.icon)}</span>
+        <span className="text-sm">{link.text}</span>
+    </NavLink>
+  ))
+
   const renderMobileNav = () => (
-    <div>
+    <div className="">
         <div className="w-full h-16"></div>
-        <nav className="fixed top-0 w-full shadow-md bg-white z-50 navbar">
-            <div className="flex justify-between items-center px-4 py-3">
-                <NavLink to='jobs' className={({isActive}) =>`flex flex-col items-center gap-2 rounded-sm ${isActive ? 'text-[var(--primary-color)]' : 'text-gray-600'}`}>
-                    <span><FaSuitcase /></span>
-                    <span className="text-sm">Jobs</span>
-                </NavLink>
-                <NavLink to='companies' className={({isActive}) =>`flex flex-col items-center gap-2 rounded-sm ${isActive ? 'text-[var(--primary-color)]' : 'text-gray-600'}`}>
-                    <span><FaBuilding /></span>
-                    <span className="text-sm">Companies</span>
-                </NavLink>
-                <NavLink to='applications' className={({isActive}) =>`flex flex-col items-center gap-2 rounded-sm ${isActive ? 'text-[var(--primary-color)]' : 'text-gray-600'}`}>
-                    <span><FaClipboardList /></span>
-                    <span className="text-sm">Apps</span>
-                </NavLink>
-                <NavLink to='profile' className={({isActive}) =>`flex flex-col items-center gap-2 rounded-sm ${isActive ? 'text-[var(--primary-color)]' : 'text-gray-600'}`}>
-                    <span><FaUserCircle /></span>
-                    <span className="text-sm">Profile</span>
-                </NavLink>
-                <NavLink to='/login' className="text-gray-600 flex flex-col items-center gap-2">
-                    <span><FaSignInAlt /></span>
-                    <span className="text-sm">Login</span>
-                </NavLink>
+        <nav className="fixed bottom-0 w-full border shadow-md bg-white z-50">
+            <div className="flex justify-between items-center">
+                {renderNavLinks}
             </div>
         </nav>
     </div>

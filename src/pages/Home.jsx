@@ -5,11 +5,11 @@ import Navbar from "../components/global/Navbar"
 
 const Home = () => {
   return (
-    <div className="relative">
-      <Navbar />
-      <div className="px-4 py-6">
+    <div className="relative container">
+      <div className="p-4">
         <Outlet />
       </div>
+      <Navbar />
     </div>
   )
 }
