@@ -48,7 +48,7 @@ const Navbar = () => {
   const renderMobileNav = () => (
     <div>
         <div className="w-full h-16"></div>
-        <nav className="fixed top-0 w-full shadow-md bg-white z-50 navbar">
+        <nav className="fixed bottom-0 w-full shadow-md bg-white z-50 navbar">
             <div className="flex justify-between items-center px-4 py-3">
                 <NavLink to='jobs' className={({isActive}) =>`flex flex-col items-center gap-2 rounded-sm ${isActive ? 'text-[var(--primary-color)]' : 'text-gray-600'}`}>
                     <span><FaSuitcase /></span>
