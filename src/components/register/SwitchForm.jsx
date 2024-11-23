@@ -2,19 +2,19 @@ import React from 'react'
 
 const SwitchForm = ({ switchForm, setSwitchForm}) => {
   return (
-    <div className='flex justify-between bg-slate-200 w-full p-2 rounded-sm'>
+    <div className='flex justify-between bg-slate-200 dark:bg-[#2B3844] w-full p-2 rounded-sm'>
         <div className='relative w-full'>
             <div className={`absolute w-1/2 rounded-sm bg-[var(--primary-color)] h-[32px] z-0 transition-transform duration-300 ease-in-out ${switchForm === 'company' ? 'translate-x-full' : 'translate-x-0'}`}></div>
 
             <button 
                 onClick={() => setSwitchForm('user')}
-                className={`relative font-medium py-1 w-1/2 z-10 ${switchForm === 'user' ? 'text-white' : 'text-gray-600'}`}
+                className={`relative font-medium py-1 w-1/2 z-10 ${switchForm === 'user' ? 'text-white' : 'text-gray-600 dark:text-gray-400'}`}
             >
                 User
             </button>
             <button 
                 onClick={() => setSwitchForm('company')}
-                className={`relative font-medium py-1 w-1/2 z-10 ${switchForm === 'company' ? 'text-white' : 'text-gray-600'}`}
+                className={`relative font-medium py-1 w-1/2 z-10 ${switchForm === 'company' ? 'text-white' : 'text-gray-600 dark:text-gray-400'}`}
             >
                 Company
             </button>

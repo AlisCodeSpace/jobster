@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 
-import JobsterLight  from '../../public/jobster-light.png'
+import JobsterLight  from '../assets/images/jobster-light.png'
 
 import LoginForm from '../components/login/LoginForm';
 import SocialLogin from '../components/login/SocialLogin';
@@ -19,17 +19,17 @@ const Login = () => {
       <LoginForm />
 
       {/* Divider */}
-      <div className="flex items-center w-full">
+      {/* <div className="flex items-center w-full">
         <hr className="bg-gray-500 w-full"></hr>
         <span className="px-2 text-gray-600">or</span>
         <hr className="bg-gray-500 w-full"></hr>
-      </div>
+      </div> */}
 
       {/* Login with social media */}
-      <SocialLogin />
+      {/* <SocialLogin /> */}
 
       {/* Sign up if no account */}
-      <p>Don't have an account? <Link to='/register' className='text-[var(--primary-color)] font-medium'>Sign Up</Link></p>
+      <p className='text-gray-800'>Don't have an account? <Link to='/register' className='text-[var(--primary-color)] font-medium'>Sign Up</Link></p>
     </div>
   )
 }

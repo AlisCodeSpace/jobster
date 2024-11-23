@@ -11,3 +11,7 @@ body {
     padding: 0;
     background-color: #F0F0F0;
 }
+
+.dark {
+    background-color: #202C36;
+}

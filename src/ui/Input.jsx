@@ -1,8 +1,8 @@
 import React from 'react'
 
 
-const Input = ({ className, type, placeholder, value, id, name, handleChange }) => {
-    const classes = `${className || 'bg-transparent rounded-sm px-2 py-2 border border-gray-400 focus:border-[var(--primary-color)] text-[var(--primary-color)] placeholder-gray-500 w-full outline-none '} `
+const Input = ({ className, type, placeholder, value, id, name, handleChange, error }) => {
+    const classes = `${className || ''} bg-transparent rounded-sm px-2 py-2 border text-[var(--primary-color)] placeholder-gray-500 w-full outline-none dark:border-gray-400 dark:text-gray-300 ${error ? 'border-red-700 text-red-700 focus:border-red-700' : 'border-gray-400 focus:border-[var(--primary-color)]'}`
 
     const renderInput = () => (
         <input 
