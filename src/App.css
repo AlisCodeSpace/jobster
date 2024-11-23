@@ -15,3 +15,7 @@ body {
 .dark {
     background-color: #202C36;
 }
+
+.navbar {
+    padding-top: env(safe-area-inset-top);
+}
