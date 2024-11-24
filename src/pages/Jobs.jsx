@@ -17,7 +17,7 @@ const Jobs = () => {
       location: 'United States',
       workStyle: 'Remote',
       skills: ['React', '.NET', 'SQL'],
-      datePosted: '1 day ago',
+      datePosted: '1d',
     },
     {
       id: 2,
@@ -28,7 +28,7 @@ const Jobs = () => {
       location: 'Lebanon',
       workStyle: 'Hybrid',
       skills: ['Angular', 'Laravel', 'SQL'],
-      datePosted: '5 min ago',
+      datePosted: '5m',
     }
   ]
 

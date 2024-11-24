@@ -1,11 +1,10 @@
 import React from 'react'
 
-import CompanyLogo from '../../assets/images/google.png'
 import { Link } from 'react-router-dom'
 
 const Job = ({ logo, companyName, position, jobType, location, workStyle, skills, datePosted}) => {
   const skillset = skills.map((skill, index) => (
-    <span key={index} className='rounded-lg border border-[var(--primary-color)] bg-[var(--primary-color)] text-white text-sm px-2 '>{skill}</span>
+    <span key={index} className='rounded-sm bg-[var(--primary-color)] text-white text-sm py-1 px-2 '>{skill}</span>
   ))
 
   return (
