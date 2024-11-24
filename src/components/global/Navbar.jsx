@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import JobsterLight from "../../assets/images/jobster-light.png";
 
@@ -19,22 +19,24 @@ const Navbar = () => {
   }, []);
 
   const renderDesktopNav = () => (
-    <nav className="flex justify-between items-center py-3 px-6 shadow-md bg-white z-50">
+    <div>
+      <div className=""></div>
+      <nav className="sticky top-0 w-full flex justify-between items-center py-3 px-6 shadow-md bg-white z-50">
       {/* Logo */}
       <div>
         <img src={JobsterLight} width={128} alt="Jobster Light Logo" />
       </div>
 
       {/* Middle Nav Elements */}
-      <div className="flex items-center gap-4 text-gray-600">
-        <Button text="Jobs" path="jobs" />
-        <Button text="Companies" path="companies" />
-        <Button text="Applications" path="applications" />
+      <div className="flex items-center gap-4">
+        <NavLink to='jobs' className={({ isActive }) => `link ${isActive ? 'text-[var(--primary-color)]' : ''}`}>Jobs</NavLink>
+        <NavLink to='companies' className={({ isActive }) => `link ${isActive ? 'text-[var(--primary-color)]' : ''}`}>Companies</NavLink>
       </div>
 
       {/* Login and Register */}
       <div className="flex items-center gap-4">
-        <Button text="Login" path="/login" className="text-gray-600"/>
+        <Link to='/login' className='link'>Login</Link>
+
         <Button
           text="Register"
           path="/register"
@@ -42,17 +44,18 @@ const Navbar = () => {
         />
       </div>
     </nav>
+    </div>
   );
 
   const renderNavLinks = navlinks.map((link, index) => (
-    <NavLink key={index} to={link.path} className={({isActive}) =>`w-16 py-2 flex flex-col items-center gap-2 rounded-sm border-t-[3px] ${isActive ? 'text-[var(--primary-color)] border-[var(--primary-color)]' : 'text-gray-600 border-transparent'}`}>
+    <NavLink key={index} to={link.path} className={({isActive}) =>`mobile-navlink ${isActive ? 'text-[var(--primary-color)] border-[var(--primary-color)]' : 'text-gray-600 border-transparent'}`}>
         <span>{React.createElement(link.icon)}</span>
         <span className="text-sm">{link.text}</span>
     </NavLink>
   ))
 
   const renderMobileNav = () => (
-    <div className="">
+    <div>
         <div className="w-full h-16"></div>
         <nav className="fixed bottom-0 w-full border shadow-md bg-white z-50">
             <div className="flex justify-between items-center">

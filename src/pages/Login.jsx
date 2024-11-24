@@ -13,7 +13,6 @@ import { FaArrowLeft } from "react-icons/fa";
 const Login = () => {
   return (
     <div className='flex flex-col items-center justify-center gap-10 w-full h-screen px-10'>
-
       {/* Logo */}
       <div>
         <img src={JobsterLight} width={248} alt="Jobster Light Logo" />
@@ -22,21 +21,22 @@ const Login = () => {
       {/* Login Form */}
       <LoginForm />
 
-
       {/* Login with social media */}
       {/* <SocialLogin /> */}
 
       {/* Sign up if no account */}
-      <p className='text-gray-800'>Don't have an account? <Link to='/register' className='text-[var(--primary-color)] font-medium'>Sign Up</Link></p>
+      <div className='flex flex-col items-center gap-2'>
+        <p className='text-gray-800'>Don't have an account? <Link to='/register' className='intext-link'>Sign Up</Link></p>
 
-      {/* Divider */}
-      <div className="flex items-center w-full">
-        <hr className="bg-gray-500 w-full"></hr>
-        <span className="px-2 text-gray-600">or</span>
-        <hr className="bg-gray-500 w-full"></hr>
+        {/* Divider */}
+        <div className="flex items-center justify-center w-full">
+          <hr className="bg-gray-500 w-10"></hr>
+          <span className="px-2 text-gray-600">or</span>
+          <hr className="bg-gray-500 w-10"></hr>
+        </div>
+
+        <p>Stay as <Link to='/' className='intext-link'>Guest</Link></p>
       </div>
-
-      <p>Stay as <Link to='/' className='text-[var(--primary-color)] font-medium'>Guest</Link></p>
     </div>
   )
 }

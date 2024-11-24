@@ -3,6 +3,7 @@ import Input from '../ui/Input'
 import Button from '../ui/Button'
 
 import { EmailValidation } from '../utils/Validations'
+import { Link } from 'react-router-dom'
 
 
 const ForgotPassword = () => {
@@ -45,7 +46,7 @@ const ForgotPassword = () => {
 
             <div className='flex items-center justify-between w-full'>
                 <Button text='Send Code'/>
-                <Button path='/login' text='Back to login' className='text-gray-800'/>
+                <Link to='/login' className='link text-gray-800'>Back to login</Link>
             </div>
         </form>
     </div>

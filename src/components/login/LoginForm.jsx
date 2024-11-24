@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 import Button from '../../ui/Button'
 import Input from '../../ui/Input'
 
 import { FaEye, FaEyeSlash } from 'react-icons/fa'
-import { Link } from 'react-router-dom'
 
 const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false)
@@ -25,13 +25,13 @@ const LoginForm = () => {
 
           {/* Forgot Password */}
           <div className='flex items-center justify-end w-full'>
-              <Button text='Forgot Password?' path='/forgotpass' className='text-[16px] text-gray-800'/>
+              <Link to='/forgotpass' className='link text-[16px] text-gray-800'>Forgot Password?</Link>
           </div>
 
           {/* Submit Button */}
           <Button type='submit' text='Login' className='button w-full'/>
 
-          <p className='text-gray-500 text-center text-xs'>By continuing, you agree to the Jobster <Link className='text-[var(--primary-color)] font-medium'>User Agreement</Link>, <Link className='text-[var(--primary-color)] font-medium'>Privacy Policy</Link>, and <Link className='text-[var(--primary-color)] font-medium'>Cookie Policy</Link>.</p>
+          <p className='text-gray-500 text-center text-xs'>By continuing, you agree to the Jobster <Link className='intext-link'>User Agreement</Link>, <Link className='intext-link'>Privacy Policy</Link>, and <Link className='intext-link'>Cookie Policy</Link>.</p>
           
         </form>  
     </div>

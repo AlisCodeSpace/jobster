@@ -37,13 +37,13 @@ export const EmailValidation = (email) => {
 };
 
 // Validate Username
-export const UsernameValidation = (username) => {
-  if (!username || username.trim() === "") {
+export const NameValidation = (name) => {
+  if (!name || name.trim() === "") {
     return "Name is required.";
   }
 
   // Optionally, add length or character constraints
-  if (username.length < 3) {
+  if (name.length < 3) {
     return "Name must be at least 3 characters long.";
   }
 
