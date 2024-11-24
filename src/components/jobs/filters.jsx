@@ -8,7 +8,7 @@ const Filters = () => {
 
   return (
     <div className='flex items-center gap-5 bg-white w-full overflow-scroll'>
-      <div className='py-5 px-4 border-r border-gray-400 rounded-sm'>
+      <div className='py-5 px-4 border-r border-gray-400'>
         <span onClick={() => setActive(prevState => !prevState)} className={`${active ? 'text-[var(--primary-color)]' : 'text-gray-600'}`}><FaSlidersH size={20}/></span>
       </div>
       <div>

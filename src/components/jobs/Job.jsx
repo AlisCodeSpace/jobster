@@ -25,7 +25,7 @@ const Job = ({ logo, companyName, position, jobType, location, workStyle, skills
                 <div className='flex gap-3'>
                   {skillset}
                 </div>
-                <span className='text-xs text-gray-600'>{datePosted}</span>
+                <span className='text-xs text-gray-600 mr-2'>{datePosted}</span>
             </div>
         </div>
       </div>
