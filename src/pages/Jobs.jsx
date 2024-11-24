@@ -3,6 +3,7 @@ import Job from '../components/jobs/Job'
 
 import GoogleLogo from '../assets/images/google.png'
 import GithubLogo from '../assets/images/github.png'
+import Filters from '../components/jobs/filters'
 
 
 const Jobs = () => {
@@ -47,7 +48,10 @@ const Jobs = () => {
 
   return (
     <div className='flex flex-col items-center w-full gap-3'>
-      {jobs}
+      <Filters />
+      <div className='flex flex-col items-center w-full gap-3 px-2'>
+        {jobs}
+      </div>
     </div>
   )
 }

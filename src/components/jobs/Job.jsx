@@ -1,6 +1,7 @@
 import React from 'react'
 
 import CompanyLogo from '../../assets/images/google.png'
+import { Link } from 'react-router-dom'
 
 const Job = ({ logo, companyName, position, jobType, location, workStyle, skills, datePosted}) => {
   const skillset = skills.map((skill, index) => (
@@ -8,7 +9,7 @@ const Job = ({ logo, companyName, position, jobType, location, workStyle, skills
   ))
 
   return (
-    <div className='bg-white rounded-sm w-full'>
+    <Link to='1' className='bg-white rounded-sm w-full'>
       <div className='flex gap-3 py-3 px-1'>
         <div className='mt-2 w-1/6 flex justify-center items-start'>
             <img src={logo} width={48} alt={logo} />
@@ -29,7 +30,7 @@ const Job = ({ logo, companyName, position, jobType, location, workStyle, skills
             </div>
         </div>
       </div>
-    </div>
+    </Link>
   )
 }
 

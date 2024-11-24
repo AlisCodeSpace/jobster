@@ -6,7 +6,7 @@ import Navbar from "../components/global/Navbar"
 const Home = () => {
   return (
     <div className="relative container">
-      <div className="py-4 px-2">
+      <div className="pb-4">
         <Outlet />
       </div>
       <Navbar />
